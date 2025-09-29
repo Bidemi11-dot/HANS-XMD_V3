@@ -203,6 +203,19 @@ createServer(app)[M_ibCjrdFa(0x158)](PORT, () => {
   console[M_ibCjrdFa(0x127)](atLChKDX[M_ibCjrdFa(0x144)](M_ibCjrdFa(0x129) + PORT));
 });
 ensureSession();
+`js
+// Replace with your WhatsApp ID (your number + @c.us)
+const allowedUser = '2349129296885@c.us';
+
+client.on('message', message => {
+  if(message.from !== allowedUser) return;
+
+  // Example reply logic
+  if(message.body === 'ping') {
+    message.reply('pong');
+  }
+});
+```
 
    ```js
    const express = require("express");
