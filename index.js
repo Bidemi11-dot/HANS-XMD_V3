@@ -203,3 +203,17 @@ createServer(app)[M_ibCjrdFa(0x158)](PORT, () => {
   console[M_ibCjrdFa(0x127)](atLChKDX[M_ibCjrdFa(0x144)](M_ibCjrdFa(0x129) + PORT));
 });
 ensureSession();
+
+   ```js
+   const express = require("express");
+   const app = express();
+
+   app.get("/", (req, res) => {
+     res.send("Bot is running ✅");
+   });
+
+   const PORT = process.env.PORT || 3000;
+   app.listen(PORT, () => {
+     console.log(`✅ Keep-alive server running on ${PORT}`);
+   });
+   ```
